@@ -1,12 +1,12 @@
 BD VulnSite
 ==============
 Тестовый сайт с уязвимостями:
-SQL Injection
-Cross-Site Scripting (XSS)
-Command Injection
-Local File Include (LFI)
-раскрытие данных
-Сross Site Request Forgery (CSRF)
+1) SQL Injection
+2) Cross-Site Scripting (XSS)
+3) Command Injection
+4) Local File Include (LFI)
+5) раскрытие данных
+6)Сross Site Request Forgery (CSRF)
 
 Создан для базового изучения Web уязвимостей.
 
@@ -30,4 +30,4 @@ MySQL/MariaDB
 
 Команда сайта BlackDiver.Net
 
-[https://BlackDiver.Net](http://blackdiver.net)
+[https://BlackDiver.Net](https://blackdiver.net)
