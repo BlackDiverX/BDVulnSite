@@ -30,4 +30,4 @@ MySQL/MariaDB
 
 Команда сайта BlackDiver.Net
 
-[http://BlackDiver.Net](http://blackdiver.net)
+[https://BlackDiver.Net](http://blackdiver.net)
