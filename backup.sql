@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 -- Структура таблицы `comments`
 --
 
+DROP TABLE IF EXISTS `comments`;
+
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -38,7 +40,7 @@ CREATE TABLE `comments` (
 
 INSERT INTO `comments` (`id`, `name`, `text`) VALUES
 (1, 'Вася', 'Отличная компания'),
-(2, 'Вася', 'Приятно с Вам работать!'),
+(2, 'Вася', 'Приятно с Вами работать!'),
 (3, 'Петя', 'Спасибо за Плодотворное сотрудничество!'),
 (4, 'Петя', 'Огромное спасибо! У Вас самый лучший сервис!'),
 (5, 'Коля', 'Отличное качество!');
@@ -48,6 +50,8 @@ INSERT INTO `comments` (`id`, `name`, `text`) VALUES
 --
 -- Структура таблицы `users`
 --
+
+DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -63,6 +67,29 @@ INSERT INTO `users` (`id`, `name`, `password`) VALUES
 (1, 'admin', 'MegaSecretPassword'),
 (2, 'admin2', 'BestPassword'),
 (3, 'user', 'Mypassword');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `secrets` (для CTF-заданий)
+--
+
+DROP TABLE IF EXISTS `secrets`;
+
+CREATE TABLE `secrets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key_name` varchar(50) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `secrets`
+--
+
+INSERT INTO `secrets` (`key_name`, `value`) VALUES
+('sqli_union', 'flag{un10n_s3l3ct_g0_brrrr}'),
+('sqli_auth', 'flag{sql_1nj3ct10n_1s_st1ll_al1v3_1n_2026}');
 
 --
 -- Индексы сохранённых таблиц
@@ -89,11 +116,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

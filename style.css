@@ -47,3 +47,29 @@ textarea {
 .menu {
 	text-align: right;
 }
+
+.task {
+	margin: 15px 0;
+	padding: 10px;
+	background-color: #efefef;
+	border-left: 4px solid #999;
+}
+
+.task-solved {
+	background-color: #e6f5e6;
+	border-left-color: #3a3;
+}
+
+.flag-success {
+	color: #2a6b2a;
+	font-weight: bold;
+}
+
+.flag-error {
+	color: #a33;
+	font-weight: bold;
+}
+
+.task h3 {
+	margin: 0 0 5px 0;
+}

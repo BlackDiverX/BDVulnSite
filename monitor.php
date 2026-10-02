@@ -2,9 +2,10 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Мониторинг — BD VulnSite</title>
 	</head>
 	<body>
-		<!-- Оформление --!>
+		<!-- Оформление -->
 		<div class=comments>
 			<div class=header>
 				<img src=logo.png>Быть уязвимыми - наша профессия
@@ -14,9 +15,10 @@
 				<a href=login.php>Вход</a> 
 				<a href=comments.php>Отзывы</a> 
 				<a href=monitor.php?page=ps>Система мониторинга</a>
+				<a href=checklist.php>Чеклист</a>
 			</div>
 			<hr>
-			<!-- Начало кода с уязвимостями --!>
+			<!-- Начало кода с уязвимостями -->
 		<?php
 			if (!empty($_GET['page'])) {
 				$page = $_GET['page'];

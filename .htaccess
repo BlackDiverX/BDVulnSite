@@ -1,0 +1,6 @@
+<Files config.php>
+  deny from all
+</Files>
+<Files parse.php>
+  deny from all
+</Files>
